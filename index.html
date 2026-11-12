@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Code Converter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eeeeee;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        h2 {
+            color: green;
+        }
+
+        textarea {
+            width: 90%;
+            height: 120px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            margin: 8px;
+            font-size: 15px;
+        }
+
+        button:active {
+            background: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>My First Code Converter</h2>
+
+        <p>Enter your words below:</p>
+
+        <textarea id="myText"
+        placeholder="Type your words here..."></textarea>
+
+        <br><br>
+
+        <button onclick="convertUpper()">
+            UPPERCASE
+        </button>
+
+        <button onclick="convertLower()">
+            lowercase
+        </button>
+
+        <button onclick="clearText()">
+            CLEAR
+        </button>
+
+    </div>
+
+    <script>
+        function convertUpper() {
+            let text = document.getElementById("myText");
+            text.value = text.value.toUpperCase();
+        }
+
+        function convertLower() {
+            let text = document.getElementById("myText");
+            text.value = text.value.toLowerCase();
+        }
+
+        function clearText() {
+            document.getElementById("myText").value = "";
+        }
+    </script>
+
+</body>
+</html>
+
